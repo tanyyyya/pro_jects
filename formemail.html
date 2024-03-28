@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Email Validation</title>
+    </head>
+    <body>
+     <form name="f1" onsubmit="return checkname()">
+        <label>Email</label>
+        <input type="Email" name="n1">
+        <input type="submit">
+     </form>
+     <script>
+        function checkname(){
+            let x=document.forms["f1"]["n1"].value;
+            let flag=false;
+            var regemail=/^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-zA-Z]$/;
+            if(!regmail.test(x))
+            {
+                alert("the email is not in the format");
+                flag=true;
+            }
+            return flag;
+        }
+     </script>
+</html>
