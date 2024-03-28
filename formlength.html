@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+     <form name="f1" onsubmit="return checkname()">
+        <label>Name</label>
+        <input type="text" name="n1">
+        <input type="submit">
+     </form>
+     
+     <script>
+        function checkname(){
+        let x=document.forms["f1"]["n1"].value;
+        let flag=false;
+        if(x.lenth==0)
+        {alert("The name field must not be blank");
+          flag=true;
+        }
+        if(x.length<10||x.length>30)
+        {alert ("The name is not in the range");
+         flag=true;
+        }
+        return flag;
+    }
+
+       </script>
+    </body>
+</html>
